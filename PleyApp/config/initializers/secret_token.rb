@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PleyApp::Application.config.secret_key_base = '11bf422ebe0eb10c558d077497c10cc9716257f6b65f69f8b28574bb963087f4107c4b808eb8de3c5e3629ae2e6ee9f9012f7af94ff0b3a0773d60d8dcdff2d9'
+PleyApp::Application.config.secret_key_base = '44a98a0c81bbf51ab8e30daa2c6326b06a898986486a2dd7a56ae0ba491154db11b91efcf030279b282f03652e5e1886aaf8e1e32f1b981706751dbecb69951d'
