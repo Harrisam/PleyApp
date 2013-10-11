@@ -4,4 +4,6 @@
 	= form_for @restaurant do |f|
 		= f.label :title
 		= f.text_field :title, placeholder: 'the name of the restaurant here...'
+		= f.label :description
+		= f.text_field :description, placeholder: 'some description'
 		= f.submit
