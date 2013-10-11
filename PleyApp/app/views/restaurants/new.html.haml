@@ -1,0 +1,7 @@
+%div
+	%h2 Please enter the name of the restaurant you wish to review:
+
+	= form_for @restaurant do |f|
+		= f.label :title
+		= f.text_field :title, placeholder: 'the name of the restaurant here...'
+		= f.submit
