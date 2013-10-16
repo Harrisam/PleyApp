@@ -34,21 +34,24 @@ describe 'the restaurants page' do
 			click_button 'Add Review'
 			expect(page).to have_content 'the coffee here is fab'
 		end
+
+		it 'should show the name of the restaurant' do 
+			click_link 'Add a review'
+			expect(page).to have_content 'Funky Monkey'
+		end
+	end
+
+	describe 'it should have a score out of 5' do 
+
+		it 'shows number after been given a score' do
+			click_link 'Add a review'
+			fill_in 'some description', with: 'the coffee here is fab' 
+			choose '3'
+			click_button 'Add Review'
+			expect(page).to have_content '3'
+		end
+
 	end
 
 
-
-
-
-
-
-	# describe 'an individual review' do
-	# 	it 'has ' do 
-	# 		create_review
-	# 		visit '/restaurants'
-			
-	# 		expect(page).to have_css 'h2', text: 'Funky Monkey'
-	# 		expect(page).to have_content 'some description'
-	# 	end
-	# end
 end

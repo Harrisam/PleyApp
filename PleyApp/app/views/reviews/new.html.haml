@@ -1,6 +1,9 @@
 %div
-	%h2 Please fill in your review of this restaurant:
+	%h2= "Please fill in your review of #{@restaurant.title}"
 
 	= form_for [@restaurant, @review] do |f|
 		= f.text_field :note, placeholder: 'some description'
+		- 1.upto(5) do |n|
+			= f.label :score, n, value: n
+			= f.radio_button :score, n
 		= f.submit 'Add Review'

@@ -3,9 +3,11 @@
 	%p
 		= @restaurant.description
 
-	%p
-		- @restaurant.reviews.each do |review|
+
+	- @restaurant.reviews.each do |review|
+		%p
 			= review.note
+			= review.score
 
 	%p
 		= link_to("Add a review", new_restaurant_review_path(@restaurant)) 
