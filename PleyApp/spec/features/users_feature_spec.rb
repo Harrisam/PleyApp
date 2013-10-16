@@ -13,12 +13,7 @@ describe 'User' do
 	end
 
 	it 'can sign up' do
-		visit '/users/sign_up'
-		fill_in "Email", with: 'sam@sam.co.uk'
-		fill_in "Password", with: '12331233'
-		fill_in "Password confirmation", with: '12331233'
-		click_button "Sign up" 
-
+		sign_up
 		expect(page).to have_content("Logged in as sam@sam.co.uk")
 	end	
 	

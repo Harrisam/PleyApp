@@ -1,3 +1,6 @@
 %div
 	- @restaurants.each do |restaurant|
 		%p= link_to restaurant.title, restaurant
+%div
+	%p
+		= button_to 'Add a new restaurant', new_restaurant_path, method: :get

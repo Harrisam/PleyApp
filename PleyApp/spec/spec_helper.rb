@@ -43,3 +43,11 @@ RSpec.configure do |config|
   config.order = "random"
   # config.formatter= :documentation
 end
+
+def sign_up
+	visit '/users/sign_up'
+	fill_in "Email", with: 'sam@sam.co.uk'
+	fill_in "Password", with: '12331233'
+	fill_in "Password confirmation", with: '12331233'
+	click_button "Sign up" 
+end
