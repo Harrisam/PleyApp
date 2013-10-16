@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title PleyApp
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %header
+      - if current_user
+        = "Logged in as #{current_user.email}"
+        = link_to 'Sign out', destroy_user_session_path, method: :delete
+      - else
+        = button_to 'Sign in!', new_user_session_path
+
+      %h1 PleyApp - Yelp but backwards
+      %p.notice= notice
+      %p.alert= alert
+
+
+
+    
+    =yield
+

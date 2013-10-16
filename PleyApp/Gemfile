@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'haml'
 gem 'bcrypt-ruby'
+gem 'devise'
 
 group :development, :test do  
 	gem 'rspec-rails', '~>2.0'

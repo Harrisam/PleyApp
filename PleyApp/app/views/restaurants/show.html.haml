@@ -2,3 +2,10 @@
 	%h2= @restaurant.title
 	%p
 		= @restaurant.description
+
+	%p
+		- @restaurant.reviews.each do |review|
+			= review.note
+
+	%p
+		= link_to("Add a review", new_restaurant_review_path(@restaurant)) 
