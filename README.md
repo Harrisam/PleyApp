@@ -7,3 +7,6 @@ Features (GOALS)
 - There should be an index page listing all restaurants
 - You can click on a restaurant to go to that restaurant's page
 - You can write a review of a restaurant. A review is composed of some text and a score from 1-5
+
+
+- I have used the devise gem for my user sign in/out/up
